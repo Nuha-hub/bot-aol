@@ -86,7 +86,7 @@ def aol(email):
 	if "@" in email:
 		email=email.split('@')[0]
 	email=f"{email}@aol.com"
-	req=requests.get(f"https://check-aol-79be50f49191.herokuapp.com/check_email/email=hassan{email}").json()
+	req=requests.get(f"https://check-aol-79be50f49191.herokuapp.com/check_email/email={email}").json()
 	if 'good' in req['status']:
 		return 'good'
 	else:
